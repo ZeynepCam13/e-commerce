@@ -3,6 +3,7 @@ using System;
 using API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20250930112726_IdentityDatabase")]
+    partial class IdentityDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.0");
@@ -158,9 +161,6 @@ namespace API.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("ImageUrl")
-                        .HasColumnType("TEXT");
-
                     b.Property<bool>("IsActive")
                         .HasColumnType("INTEGER");
 
@@ -174,6 +174,9 @@ namespace API.Migrations
                     b.Property<int>("Stock")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("imageUrl")
+                        .HasColumnType("TEXT");
+
                     b.HasKey("Id");
 
                     b.ToTable("Products");
@@ -182,72 +185,42 @@ namespace API.Migrations
                         new
                         {
                             Id = 1,
-                            Description = "Apple Watch Series",
-                            ImageUrl = "1.jpg",
+                            Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum sit amet massa vel justo condimentum luctus vel in lectus. Vivamus pellentesque, dolor vel pharetra mollis, erat ex fringilla est, at convallis erat nisl nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla.",
                             IsActive = true,
-                            Name = "Apple Watch Series 1",
-                            Price = 70000m,
-                            Stock = 100
+                            Name = "Apple watch",
+                            Price = 20000m,
+                            Stock = 100,
+                            imageUrl = "/images/products/sb-ang1.png"
                         },
                         new
                         {
                             Id = 2,
-                            Description = "Telefon açıklaması",
-                            ImageUrl = "2.jpg",
+                            Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum sit amet massa vel justo condimentum luctus vel in lectus. Vivamus pellentesque, dolor vel pharetra mollis, erat ex fringilla est, at convallis erat nisl nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla.",
                             IsActive = true,
-                            Name = "Apple Watch Series 2",
-                            Price = 80000m,
-                            Stock = 100
+                            Name = "Angular Speedster Board 2000",
+                            Price = 20000m,
+                            Stock = 100,
+                            imageUrl = "/images/products/sb-ang1.png"
                         },
                         new
                         {
                             Id = 3,
-                            Description = "Telefon açıklaması",
-                            ImageUrl = "3.jpg",
-                            IsActive = false,
-                            Name = "Apple Watch Series 3",
-                            Price = 90000m,
-                            Stock = 100
+                            Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum sit amet massa vel justo condimentum luctus vel in lectus. Vivamus pellentesque, dolor vel pharetra mollis, erat ex fringilla est, at convallis erat nisl nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla.",
+                            IsActive = true,
+                            Name = "Angular Speedster Board 2000",
+                            Price = 20000m,
+                            Stock = 100,
+                            imageUrl = "/images/products/sb-ang1.png"
                         },
                         new
                         {
                             Id = 4,
-                            Description = "Telefon açıklaması",
-                            ImageUrl = "4.jpg",
+                            Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, enim et facilisis commodo, est augue venenatis ligula, in convallis erat felis nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla. Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum sit amet massa vel justo condimentum luctus vel in lectus. Vivamus pellentesque, dolor vel pharetra mollis, erat ex fringilla est, at convallis erat nisl nec nisi. In eleifend ligula a nunc efficitur, ut finibus enim fringilla.",
                             IsActive = true,
-                            Name = "Xiaomi Redmi Watch 1",
-                            Price = 100000m,
-                            Stock = 100
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Description = "Telefon açıklaması",
-                            ImageUrl = "5.jpg",
-                            IsActive = true,
-                            Name = "Xiaomi Redmi Watch 2",
-                            Price = 100000m,
-                            Stock = 100
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Description = "Telefon açıklaması",
-                            ImageUrl = "6.jpg",
-                            IsActive = true,
-                            Name = "Xiaomi Redmi Watch 3",
-                            Price = 100000m,
-                            Stock = 100
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Description = "Telefon açıklaması",
-                            ImageUrl = "7.jpg",
-                            IsActive = true,
-                            Name = "Xiaomi Redmi Watch 4",
-                            Price = 100000m,
-                            Stock = 100
+                            Name = "Angular Speedster Board 2000",
+                            Price = 20000m,
+                            Stock = 100,
+                            imageUrl = "/images/products/sb-ang1.png"
                         });
                 });
 

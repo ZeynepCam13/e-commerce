@@ -1,25 +1,21 @@
 using API.Data;
 using API.DTO;
 using API.Entity;
-using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
-
+[Route("/api/[controller]")]
 public class CartController : ControllerBase
 {
-
     private readonly DataContext _context;
-
     public CartController(DataContext context)
     {
         _context = context;
     }
-
 
     [HttpGet]
     public async Task<ActionResult<CartDTO>> GetCart()
@@ -28,14 +24,15 @@ public class CartController : ControllerBase
     }
 
     [HttpPost]
-
     public async Task<ActionResult> AddItemToCart(int productId, int quantity)
     {
         var cart = await GetOrCreate();
+
         var product = await _context.Products.FirstOrDefaultAsync(i => i.Id == productId);
 
         if (product == null)
             return NotFound("the product is not in database");
+
         cart.AddItem(product, quantity);
 
         var result = await _context.SaveChangesAsync() > 0;
@@ -43,11 +40,10 @@ public class CartController : ControllerBase
         if (result)
             return CreatedAtAction(nameof(GetCart), CartToDTO(cart));
 
-        return BadRequest(new ProblemDetails { Title = "ürün karta eklenemedi" });
+        return BadRequest(new ProblemDetails { Title = "The product can not be added to cart" });
     }
 
     [HttpDelete]
-
     public async Task<ActionResult> DeleteItemFromCart(int productId, int quantity)
     {
         var cart = await GetOrCreate();
@@ -56,29 +52,19 @@ public class CartController : ControllerBase
 
         var result = await _context.SaveChangesAsync() > 0;
 
-        if (!result) 
+        if (result)
+            return CreatedAtAction(nameof(GetCart), CartToDTO(cart));
 
-         return BadRequest(new ProblemDetails { Title = "Kartı silerken bir problem oldu" });
-
-
-        return Ok(CartToDTO(cart));    
-         
-
-
-
-
-
-
-
+        return BadRequest(new ProblemDetails { Title = "Problem removing item from the cart" });
     }
 
     private async Task<Cart> GetOrCreate()
     {
         var cart = await _context.Carts
-                   .Include(i => i.CartItems)
-                   .ThenInclude(i => i.Product)
-                   .Where(i => i.CustomerId == Request.Cookies["customerId"])
-                   .FirstOrDefaultAsync();
+                    .Include(i => i.CartItems)
+                    .ThenInclude(i => i.Product)
+                    .Where(i => i.CustomerId == Request.Cookies["customerId"])
+                    .FirstOrDefaultAsync();
 
         if (cart == null)
         {
@@ -88,16 +74,15 @@ public class CartController : ControllerBase
             {
                 Expires = DateTime.Now.AddMonths(1),
                 IsEssential = true
-
             };
 
             Response.Cookies.Append("customerId", customerId, cookieOptions);
-
             cart = new Cart { CustomerId = customerId };
 
             _context.Carts.Add(cart);
             await _context.SaveChangesAsync();
         }
+
         return cart;
     }
 
@@ -113,11 +98,8 @@ public class CartController : ControllerBase
                 Name = item.Product.Name,
                 Price = item.Product.Price,
                 Quantity = item.Quantity,
-                imageUrl = item.Product.imageUrl
-
+                ImageUrl = item.Product.ImageUrl
             }).ToList()
-
         };
     }
-
 }

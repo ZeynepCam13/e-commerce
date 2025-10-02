@@ -10,10 +10,10 @@
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.0",
-          "Microsoft.AspNetCore.OpenApi": "9.0.2",
+          "Microsoft.AspNetCore.OpenApi": "9.0.0",
           "Microsoft.EntityFrameworkCore.Design": "9.0.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "9.0.0",
-          "Scalar.AspNetCore": "2.8.8",
+          "Scalar.AspNetCore": "1.2.56",
           "Swashbuckle.AspNetCore.SwaggerUI": "7.0.0",
           "System.IdentityModel.Tokens.Jwt": "8.3.0"
         },
@@ -58,14 +58,14 @@
           }
         }
       },
-      "Microsoft.AspNetCore.OpenApi/9.0.2": {
+      "Microsoft.AspNetCore.OpenApi/9.0.0": {
         "dependencies": {
           "Microsoft.OpenApi": "1.6.17"
         },
         "runtime": {
           "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
-            "assemblyVersion": "9.0.2.0",
-            "fileVersion": "9.0.225.6704"
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52903"
           }
         }
       },
@@ -615,11 +615,11 @@
           }
         }
       },
-      "Scalar.AspNetCore/2.8.8": {
+      "Scalar.AspNetCore/1.2.56": {
         "runtime": {
           "lib/net9.0/Scalar.AspNetCore.dll": {
-            "assemblyVersion": "2.8.8.0",
-            "fileVersion": "2.8.8.0"
+            "assemblyVersion": "1.2.56.0",
+            "fileVersion": "1.2.56.0"
           }
         }
       },
@@ -908,12 +908,12 @@
       "path": "microsoft.aspnetcore.identity.entityframeworkcore/9.0.0",
       "hashPath": "microsoft.aspnetcore.identity.entityframeworkcore.9.0.0.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.OpenApi/9.0.2": {
+    "Microsoft.AspNetCore.OpenApi/9.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-JUndpjRNdG8GvzBLH/J4hen4ehWaPcshtiQ6+sUs1Bcj3a7dOsmWpDloDlpPeMOVSlhHwUJ3Xld0ClZjsFLgFQ==",
-      "path": "microsoft.aspnetcore.openapi/9.0.2",
-      "hashPath": "microsoft.aspnetcore.openapi.9.0.2.nupkg.sha512"
+      "sha512": "sha512-FqUK5j1EOPNuFT7IafltZQ3cakqhSwVzH5ZW1MhZDe4pPXs9sJ2M5jom1Omsu+mwF2tNKKlRAzLRHQTZzbd+6Q==",
+      "path": "microsoft.aspnetcore.openapi/9.0.0",
+      "hashPath": "microsoft.aspnetcore.openapi.9.0.0.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
       "type": "package",
@@ -1174,12 +1174,12 @@
       "path": "mono.texttemplating/3.0.0",
       "hashPath": "mono.texttemplating.3.0.0.nupkg.sha512"
     },
-    "Scalar.AspNetCore/2.8.8": {
+    "Scalar.AspNetCore/1.2.56": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-vH0jv2n8BqPUNDa9+j60259r1rdqhYK/bVPFnhxhQG8e9E1vsXG+rtD1vIBKl6TwnSfn8I5APgttRTEP4f221g==",
-      "path": "scalar.aspnetcore/2.8.8",
-      "hashPath": "scalar.aspnetcore.2.8.8.nupkg.sha512"
+      "sha512": "sha512-ocgEQmRsnIu80Syawe9JXWQDyYCPi43UvhF3NN0NKNIA3OKyUuvojS4RZUT1m1RLXNeMO/obB4Zieu2v8Vt6zg==",
+      "path": "scalar.aspnetcore/1.2.56",
+      "hashPath": "scalar.aspnetcore.1.2.56.nupkg.sha512"
     },
     "SQLitePCLRaw.bundle_e_sqlite3/2.1.10": {
       "type": "package",

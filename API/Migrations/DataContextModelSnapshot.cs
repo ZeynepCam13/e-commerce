@@ -149,6 +149,24 @@ namespace API.Migrations
                     b.ToTable("CartItem");
                 });
 
+            modelBuilder.Entity("API.Entity.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
+                });
+
             modelBuilder.Entity("API.Entity.Order", b =>
                 {
                     b.Property<int>("Id")
@@ -231,6 +249,9 @@ namespace API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<int?>("CategoryId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Description")
                         .HasColumnType("TEXT");
 
@@ -252,77 +273,99 @@ namespace API.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CategoryId");
+
                     b.ToTable("Products");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            Description = "Apple Watch Series",
-                            ImageUrl = "1.jpg",
+                            Description = "Tommy Hilfiger",
+                            ImageUrl = "a1.webp",
                             IsActive = true,
-                            Name = "Apple Watch Series 1",
-                            Price = 70000m,
+                            Name = "Spor Ayakkabı",
+                            Price = 7000m,
                             Stock = 100
                         },
                         new
                         {
                             Id = 2,
-                            Description = "Telefon açıklaması",
-                            ImageUrl = "2.jpg",
+                            Description = "Stradivarius",
+                            ImageUrl = "a2.webp",
                             IsActive = true,
-                            Name = "Apple Watch Series 2",
-                            Price = 80000m,
+                            Name = "Blazer Ceket",
+                            Price = 800m,
                             Stock = 100
                         },
                         new
                         {
                             Id = 3,
-                            Description = "Telefon açıklaması",
-                            ImageUrl = "3.jpg",
+                            Description = "Stradivarius",
+                            ImageUrl = "a3.webp",
                             IsActive = false,
-                            Name = "Apple Watch Series 3",
-                            Price = 90000m,
+                            Name = "Deri Blazer Ceket",
+                            Price = 900m,
                             Stock = 100
                         },
                         new
                         {
                             Id = 4,
-                            Description = "Telefon açıklaması",
-                            ImageUrl = "4.jpg",
+                            Description = "Mango",
+                            ImageUrl = "a4.webp",
                             IsActive = true,
-                            Name = "Xiaomi Redmi Watch 1",
-                            Price = 100000m,
+                            Name = "Çanta",
+                            Price = 1000m,
                             Stock = 100
                         },
                         new
                         {
                             Id = 5,
-                            Description = "Telefon açıklaması",
-                            ImageUrl = "5.jpg",
+                            Description = "Armine",
+                            ImageUrl = "a5.webp",
                             IsActive = true,
-                            Name = "Xiaomi Redmi Watch 2",
-                            Price = 100000m,
+                            Name = "Çanta",
+                            Price = 800m,
                             Stock = 100
                         },
                         new
                         {
                             Id = 6,
-                            Description = "Telefon açıklaması",
-                            ImageUrl = "6.jpg",
+                            Description = "Rayban",
+                            ImageUrl = "a6.webp",
                             IsActive = true,
-                            Name = "Xiaomi Redmi Watch 3",
-                            Price = 100000m,
+                            Name = "Güneş Gözlüğü",
+                            Price = 5000m,
                             Stock = 100
                         },
                         new
                         {
                             Id = 7,
-                            Description = "Telefon açıklaması",
-                            ImageUrl = "7.jpg",
+                            Description = "Mavi",
+                            ImageUrl = "a7.webp",
                             IsActive = true,
-                            Name = "Xiaomi Redmi Watch 4",
-                            Price = 100000m,
+                            Name = "Pantolon",
+                            Price = 1000m,
+                            Stock = 100
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Description = "Fossil",
+                            ImageUrl = "a8.webp",
+                            IsActive = true,
+                            Name = "Kol Saati",
+                            Price = 1000m,
+                            Stock = 100
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Description = "Manuka",
+                            ImageUrl = "a9.webp",
+                            IsActive = true,
+                            Name = "Süet Ceket",
+                            Price = 1500m,
                             Stock = 100
                         });
                 });
@@ -465,6 +508,15 @@ namespace API.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("API.Entity.Product", b =>
+                {
+                    b.HasOne("API.Entity.Category", "Category")
+                        .WithMany("Products")
+                        .HasForeignKey("CategoryId");
+
+                    b.Navigation("Category");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("API.Entity.AppRole", null)
@@ -519,6 +571,11 @@ namespace API.Migrations
             modelBuilder.Entity("API.Entity.Cart", b =>
                 {
                     b.Navigation("CartItems");
+                });
+
+            modelBuilder.Entity("API.Entity.Category", b =>
+                {
+                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("API.Entity.Order", b =>

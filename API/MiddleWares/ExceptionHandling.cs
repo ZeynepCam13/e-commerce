@@ -11,8 +11,8 @@ public class ExceptionHandling
 
     public ExceptionHandling(
         RequestDelegate next,
-         ILogger<ExceptionHandling> logger,
-         IHostEnvironment env)
+        ILogger<ExceptionHandling> logger,
+        IHostEnvironment env)
     {
         _next = next;
         _logger = logger;
@@ -24,7 +24,6 @@ public class ExceptionHandling
         try
         {
             await _next(context);
-
         }
         catch (Exception ex)
         {
@@ -38,15 +37,10 @@ public class ExceptionHandling
                 Detail = _env.IsDevelopment() ? ex.StackTrace?.ToString() : null,
                 Title = ex.Message
             };
-            var options = new JsonSerializerOptions
-            {
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
-            };
+
+            var options = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
             var json = JsonSerializer.Serialize(response, options);
             await context.Response.WriteAsync(json);
         }
     }
-
-
-
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rgTpgamfRGUJu8vgIHCiZenHIULom2vYXxgyeX1U2pI=",
+  "Hash": "4J2A57JHZZXHXOZk3fV4Ik1r1dHBfl9K0fLGCSP6OMM=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\1.jpg",
+      "Identity": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a1.webp",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "images/1#[.{fingerprint}]?.jpg",
+      "RelativePath": "images/a1#[.{fingerprint}]?.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -31,19 +31,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "3hkxvo0xqq",
-      "Integrity": "Gftl2l1seImUONudAyf6aS2tqx6K3GNrt9e+xfR8M1Y=",
+      "Fingerprint": "pf1jwve0uy",
+      "Integrity": "BWqEX+Vn2jpIMmGJn+Wyt1jYdFx6nulA6K3hsrqlKaI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\1.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\a1.webp"
     },
     {
-      "Identity": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\2.jpg",
+      "Identity": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a2.webp",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "images/2#[.{fingerprint}]?.jpg",
+      "RelativePath": "images/a2#[.{fingerprint}]?.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -52,19 +52,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "vssi81a86z",
-      "Integrity": "T65//uy1JFo8yQwgCIZIvvvT20H20drurF2SnfzA7GM=",
+      "Fingerprint": "sxxlvjr577",
+      "Integrity": "8MUayQftxX+OMJCGQK7ED0RLuppzbhX1bO7LB3zh0Qs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\2.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\a2.webp"
     },
     {
-      "Identity": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\3.jpg",
+      "Identity": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a3.webp",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "images/3#[.{fingerprint}]?.jpg",
+      "RelativePath": "images/a3#[.{fingerprint}]?.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -73,19 +73,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "xrzecoeyav",
-      "Integrity": "nfjKH3GGe65a8MjfwqVq6lvGncxJBR0EYjKlsFjsGZE=",
+      "Fingerprint": "j25vispluo",
+      "Integrity": "lcLAK9csXcrF0qWug33sxi1NYBR1gl8mfDyI6BoiGts=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\3.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\a3.webp"
     },
     {
-      "Identity": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\4.jpg",
+      "Identity": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a4.webp",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "images/4#[.{fingerprint}]?.jpg",
+      "RelativePath": "images/a4#[.{fingerprint}]?.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -94,19 +94,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "mt3q269pqe",
-      "Integrity": "JoAcm2LxYV3xdXpQGhAaU7rSUSNWxOBqNtk+qPvp8cc=",
+      "Fingerprint": "kq8zffptwf",
+      "Integrity": "BA6V+zBSLPygq3qTqj0MW997u+3RVHVhw31olXTwMgs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\4.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\a4.webp"
     },
     {
-      "Identity": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\5.jpg",
+      "Identity": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a5.webp",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "images/5#[.{fingerprint}]?.jpg",
+      "RelativePath": "images/a5#[.{fingerprint}]?.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -115,19 +115,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "d93q1lyj7c",
-      "Integrity": "AYgBM/iuKQUoAUrJBfveXu59kgtRyPtEIOKe/ajpIWE=",
+      "Fingerprint": "djztdo7f3k",
+      "Integrity": "KRa0vnKy2AlE9QsGmhQxrB+OAU9oVg3EkgBFEqqVr90=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\5.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\a5.webp"
     },
     {
-      "Identity": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\6.jpg",
+      "Identity": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a6.webp",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "images/6#[.{fingerprint}]?.jpg",
+      "RelativePath": "images/a6#[.{fingerprint}]?.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -136,19 +136,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "1mgbua76o9",
-      "Integrity": "J6FxtX/wg5SopCjFiGvuFXv84+5zlY6lyQiWjPLcydE=",
+      "Fingerprint": "yibb5ruykl",
+      "Integrity": "5h9Y8XTR/syI/VUpx09kEnte54jWgEP1Q4FGWcq8gU0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\6.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\a6.webp"
     },
     {
-      "Identity": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\7.jpg",
+      "Identity": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a7.webp",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "images/7#[.{fingerprint}]?.jpg",
+      "RelativePath": "images/a7#[.{fingerprint}]?.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -157,17 +157,59 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "xrzecoeyav",
-      "Integrity": "nfjKH3GGe65a8MjfwqVq6lvGncxJBR0EYjKlsFjsGZE=",
+      "Fingerprint": "ftuchmu0js",
+      "Integrity": "/S8C4mMQCQO0VfcuhamgzDZjS2ruz3RuWkmbfba65U8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\7.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\a7.webp"
+    },
+    {
+      "Identity": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a8.webp",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "images/a8#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ffzfivnhmn",
+      "Integrity": "Gz9BqSlCXT1veTg7uv9gpF+2w85dj4p++8FCgkNNYMM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\a8.webp"
+    },
+    {
+      "Identity": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a9.webp",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "images/a9#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "12jlw01l5q",
+      "Integrity": "RzzFlDPvkB3Ja5mWYb6e/pJdOXeVWeWGdbvmT1GAyEw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\a9.webp"
     }
   ],
   "Endpoints": [
     {
-      "Route": "images/1.3hkxvo0xqq.jpg",
-      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\1.jpg",
+      "Route": "images/a1.pf1jwve0uy.webp",
+      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a1.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -176,19 +218,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "42120"
+          "Value": "28466"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/webp"
         },
         {
           "Name": "ETag",
-          "Value": "\"Gftl2l1seImUONudAyf6aS2tqx6K3GNrt9e+xfR8M1Y=\""
+          "Value": "\"BWqEX+Vn2jpIMmGJn+Wyt1jYdFx6nulA6K3hsrqlKaI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 13:26:34 GMT"
+          "Value": "Thu, 13 Mar 2025 23:24:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -198,21 +240,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "3hkxvo0xqq"
+          "Value": "pf1jwve0uy"
         },
         {
           "Name": "label",
-          "Value": "images/1.jpg"
+          "Value": "images/a1.webp"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Gftl2l1seImUONudAyf6aS2tqx6K3GNrt9e+xfR8M1Y="
+          "Value": "sha256-BWqEX+Vn2jpIMmGJn+Wyt1jYdFx6nulA6K3hsrqlKaI="
         }
       ]
     },
     {
-      "Route": "images/1.jpg",
-      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\1.jpg",
+      "Route": "images/a1.webp",
+      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a1.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -221,19 +263,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "42120"
+          "Value": "28466"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/webp"
         },
         {
           "Name": "ETag",
-          "Value": "\"Gftl2l1seImUONudAyf6aS2tqx6K3GNrt9e+xfR8M1Y=\""
+          "Value": "\"BWqEX+Vn2jpIMmGJn+Wyt1jYdFx6nulA6K3hsrqlKaI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 13:26:34 GMT"
+          "Value": "Thu, 13 Mar 2025 23:24:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -243,13 +285,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Gftl2l1seImUONudAyf6aS2tqx6K3GNrt9e+xfR8M1Y="
+          "Value": "sha256-BWqEX+Vn2jpIMmGJn+Wyt1jYdFx6nulA6K3hsrqlKaI="
         }
       ]
     },
     {
-      "Route": "images/2.jpg",
-      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\2.jpg",
+      "Route": "images/a2.sxxlvjr577.webp",
+      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a2.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -258,56 +300,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "47654"
+          "Value": "69870"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/webp"
         },
         {
           "Name": "ETag",
-          "Value": "\"T65//uy1JFo8yQwgCIZIvvvT20H20drurF2SnfzA7GM=\""
+          "Value": "\"8MUayQftxX+OMJCGQK7ED0RLuppzbhX1bO7LB3zh0Qs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 13:26:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-T65//uy1JFo8yQwgCIZIvvvT20H20drurF2SnfzA7GM="
-        }
-      ]
-    },
-    {
-      "Route": "images/2.vssi81a86z.jpg",
-      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\2.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "47654"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"T65//uy1JFo8yQwgCIZIvvvT20H20drurF2SnfzA7GM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 13:26:50 GMT"
+          "Value": "Thu, 13 Mar 2025 23:31:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -317,21 +322,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vssi81a86z"
+          "Value": "sxxlvjr577"
         },
         {
           "Name": "label",
-          "Value": "images/2.jpg"
+          "Value": "images/a2.webp"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-T65//uy1JFo8yQwgCIZIvvvT20H20drurF2SnfzA7GM="
+          "Value": "sha256-8MUayQftxX+OMJCGQK7ED0RLuppzbhX1bO7LB3zh0Qs="
         }
       ]
     },
     {
-      "Route": "images/3.jpg",
-      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\3.jpg",
+      "Route": "images/a2.webp",
+      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a2.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -340,19 +345,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "45377"
+          "Value": "69870"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/webp"
         },
         {
           "Name": "ETag",
-          "Value": "\"nfjKH3GGe65a8MjfwqVq6lvGncxJBR0EYjKlsFjsGZE=\""
+          "Value": "\"8MUayQftxX+OMJCGQK7ED0RLuppzbhX1bO7LB3zh0Qs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 13:26:57 GMT"
+          "Value": "Thu, 13 Mar 2025 23:31:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -362,13 +367,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-nfjKH3GGe65a8MjfwqVq6lvGncxJBR0EYjKlsFjsGZE="
+          "Value": "sha256-8MUayQftxX+OMJCGQK7ED0RLuppzbhX1bO7LB3zh0Qs="
         }
       ]
     },
     {
-      "Route": "images/3.xrzecoeyav.jpg",
-      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\3.jpg",
+      "Route": "images/a3.j25vispluo.webp",
+      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a3.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -377,19 +382,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "45377"
+          "Value": "83734"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/webp"
         },
         {
           "Name": "ETag",
-          "Value": "\"nfjKH3GGe65a8MjfwqVq6lvGncxJBR0EYjKlsFjsGZE=\""
+          "Value": "\"lcLAK9csXcrF0qWug33sxi1NYBR1gl8mfDyI6BoiGts=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 13:26:57 GMT"
+          "Value": "Thu, 13 Mar 2025 23:37:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -399,21 +404,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xrzecoeyav"
+          "Value": "j25vispluo"
         },
         {
           "Name": "label",
-          "Value": "images/3.jpg"
+          "Value": "images/a3.webp"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-nfjKH3GGe65a8MjfwqVq6lvGncxJBR0EYjKlsFjsGZE="
+          "Value": "sha256-lcLAK9csXcrF0qWug33sxi1NYBR1gl8mfDyI6BoiGts="
         }
       ]
     },
     {
-      "Route": "images/4.jpg",
-      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\4.jpg",
+      "Route": "images/a3.webp",
+      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a3.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -422,19 +427,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "37137"
+          "Value": "83734"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/webp"
         },
         {
           "Name": "ETag",
-          "Value": "\"JoAcm2LxYV3xdXpQGhAaU7rSUSNWxOBqNtk+qPvp8cc=\""
+          "Value": "\"lcLAK9csXcrF0qWug33sxi1NYBR1gl8mfDyI6BoiGts=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 13:27:05 GMT"
+          "Value": "Thu, 13 Mar 2025 23:37:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -444,13 +449,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-JoAcm2LxYV3xdXpQGhAaU7rSUSNWxOBqNtk+qPvp8cc="
+          "Value": "sha256-lcLAK9csXcrF0qWug33sxi1NYBR1gl8mfDyI6BoiGts="
         }
       ]
     },
     {
-      "Route": "images/4.mt3q269pqe.jpg",
-      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\4.jpg",
+      "Route": "images/a4.kq8zffptwf.webp",
+      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a4.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -459,19 +464,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "37137"
+          "Value": "144622"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/webp"
         },
         {
           "Name": "ETag",
-          "Value": "\"JoAcm2LxYV3xdXpQGhAaU7rSUSNWxOBqNtk+qPvp8cc=\""
+          "Value": "\"BA6V+zBSLPygq3qTqj0MW997u+3RVHVhw31olXTwMgs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 13:27:05 GMT"
+          "Value": "Thu, 13 Mar 2025 23:23:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -481,21 +486,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "mt3q269pqe"
+          "Value": "kq8zffptwf"
         },
         {
           "Name": "label",
-          "Value": "images/4.jpg"
+          "Value": "images/a4.webp"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-JoAcm2LxYV3xdXpQGhAaU7rSUSNWxOBqNtk+qPvp8cc="
+          "Value": "sha256-BA6V+zBSLPygq3qTqj0MW997u+3RVHVhw31olXTwMgs="
         }
       ]
     },
     {
-      "Route": "images/5.d93q1lyj7c.jpg",
-      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\5.jpg",
+      "Route": "images/a4.webp",
+      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a4.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -504,64 +509,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "39307"
+          "Value": "144622"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/webp"
         },
         {
           "Name": "ETag",
-          "Value": "\"AYgBM/iuKQUoAUrJBfveXu59kgtRyPtEIOKe/ajpIWE=\""
+          "Value": "\"BA6V+zBSLPygq3qTqj0MW997u+3RVHVhw31olXTwMgs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 13:27:13 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "d93q1lyj7c"
-        },
-        {
-          "Name": "label",
-          "Value": "images/5.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-AYgBM/iuKQUoAUrJBfveXu59kgtRyPtEIOKe/ajpIWE="
-        }
-      ]
-    },
-    {
-      "Route": "images/5.jpg",
-      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\5.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "39307"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"AYgBM/iuKQUoAUrJBfveXu59kgtRyPtEIOKe/ajpIWE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 13:27:13 GMT"
+          "Value": "Thu, 13 Mar 2025 23:23:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -571,13 +531,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-AYgBM/iuKQUoAUrJBfveXu59kgtRyPtEIOKe/ajpIWE="
+          "Value": "sha256-BA6V+zBSLPygq3qTqj0MW997u+3RVHVhw31olXTwMgs="
         }
       ]
     },
     {
-      "Route": "images/6.1mgbua76o9.jpg",
-      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\6.jpg",
+      "Route": "images/a5.djztdo7f3k.webp",
+      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a5.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -586,19 +546,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "46560"
+          "Value": "113116"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/webp"
         },
         {
           "Name": "ETag",
-          "Value": "\"J6FxtX/wg5SopCjFiGvuFXv84+5zlY6lyQiWjPLcydE=\""
+          "Value": "\"KRa0vnKy2AlE9QsGmhQxrB+OAU9oVg3EkgBFEqqVr90=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 13:27:19 GMT"
+          "Value": "Thu, 13 Mar 2025 23:30:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -608,21 +568,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "1mgbua76o9"
+          "Value": "djztdo7f3k"
         },
         {
           "Name": "label",
-          "Value": "images/6.jpg"
+          "Value": "images/a5.webp"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-J6FxtX/wg5SopCjFiGvuFXv84+5zlY6lyQiWjPLcydE="
+          "Value": "sha256-KRa0vnKy2AlE9QsGmhQxrB+OAU9oVg3EkgBFEqqVr90="
         }
       ]
     },
     {
-      "Route": "images/6.jpg",
-      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\6.jpg",
+      "Route": "images/a5.webp",
+      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a5.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -631,19 +591,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "46560"
+          "Value": "113116"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/webp"
         },
         {
           "Name": "ETag",
-          "Value": "\"J6FxtX/wg5SopCjFiGvuFXv84+5zlY6lyQiWjPLcydE=\""
+          "Value": "\"KRa0vnKy2AlE9QsGmhQxrB+OAU9oVg3EkgBFEqqVr90=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 13:27:19 GMT"
+          "Value": "Thu, 13 Mar 2025 23:30:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -653,13 +613,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-J6FxtX/wg5SopCjFiGvuFXv84+5zlY6lyQiWjPLcydE="
+          "Value": "sha256-KRa0vnKy2AlE9QsGmhQxrB+OAU9oVg3EkgBFEqqVr90="
         }
       ]
     },
     {
-      "Route": "images/7.jpg",
-      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\7.jpg",
+      "Route": "images/a6.webp",
+      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a6.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -668,19 +628,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "45377"
+          "Value": "15316"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/webp"
         },
         {
           "Name": "ETag",
-          "Value": "\"nfjKH3GGe65a8MjfwqVq6lvGncxJBR0EYjKlsFjsGZE=\""
+          "Value": "\"5h9Y8XTR/syI/VUpx09kEnte54jWgEP1Q4FGWcq8gU0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 13:27:26 GMT"
+          "Value": "Thu, 13 Mar 2025 23:24:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -690,13 +650,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-nfjKH3GGe65a8MjfwqVq6lvGncxJBR0EYjKlsFjsGZE="
+          "Value": "sha256-5h9Y8XTR/syI/VUpx09kEnte54jWgEP1Q4FGWcq8gU0="
         }
       ]
     },
     {
-      "Route": "images/7.xrzecoeyav.jpg",
-      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\7.jpg",
+      "Route": "images/a6.yibb5ruykl.webp",
+      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a6.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -705,19 +665,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "45377"
+          "Value": "15316"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/webp"
         },
         {
           "Name": "ETag",
-          "Value": "\"nfjKH3GGe65a8MjfwqVq6lvGncxJBR0EYjKlsFjsGZE=\""
+          "Value": "\"5h9Y8XTR/syI/VUpx09kEnte54jWgEP1Q4FGWcq8gU0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 28 Nov 2024 13:27:26 GMT"
+          "Value": "Thu, 13 Mar 2025 23:24:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -727,15 +687,261 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xrzecoeyav"
+          "Value": "yibb5ruykl"
         },
         {
           "Name": "label",
-          "Value": "images/7.jpg"
+          "Value": "images/a6.webp"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-nfjKH3GGe65a8MjfwqVq6lvGncxJBR0EYjKlsFjsGZE="
+          "Value": "sha256-5h9Y8XTR/syI/VUpx09kEnte54jWgEP1Q4FGWcq8gU0="
+        }
+      ]
+    },
+    {
+      "Route": "images/a7.ftuchmu0js.webp",
+      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a7.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "84700"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/S8C4mMQCQO0VfcuhamgzDZjS2ruz3RuWkmbfba65U8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 23:29:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ftuchmu0js"
+        },
+        {
+          "Name": "label",
+          "Value": "images/a7.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/S8C4mMQCQO0VfcuhamgzDZjS2ruz3RuWkmbfba65U8="
+        }
+      ]
+    },
+    {
+      "Route": "images/a7.webp",
+      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a7.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "84700"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/S8C4mMQCQO0VfcuhamgzDZjS2ruz3RuWkmbfba65U8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 23:29:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/S8C4mMQCQO0VfcuhamgzDZjS2ruz3RuWkmbfba65U8="
+        }
+      ]
+    },
+    {
+      "Route": "images/a8.ffzfivnhmn.webp",
+      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a8.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "43362"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Gz9BqSlCXT1veTg7uv9gpF+2w85dj4p++8FCgkNNYMM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 23:25:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ffzfivnhmn"
+        },
+        {
+          "Name": "label",
+          "Value": "images/a8.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Gz9BqSlCXT1veTg7uv9gpF+2w85dj4p++8FCgkNNYMM="
+        }
+      ]
+    },
+    {
+      "Route": "images/a8.webp",
+      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a8.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "43362"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Gz9BqSlCXT1veTg7uv9gpF+2w85dj4p++8FCgkNNYMM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 23:25:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Gz9BqSlCXT1veTg7uv9gpF+2w85dj4p++8FCgkNNYMM="
+        }
+      ]
+    },
+    {
+      "Route": "images/a9.12jlw01l5q.webp",
+      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a9.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "117756"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RzzFlDPvkB3Ja5mWYb6e/pJdOXeVWeWGdbvmT1GAyEw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 23:19:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "12jlw01l5q"
+        },
+        {
+          "Name": "label",
+          "Value": "images/a9.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-RzzFlDPvkB3Ja5mWYb6e/pJdOXeVWeWGdbvmT1GAyEw="
+        }
+      ]
+    },
+    {
+      "Route": "images/a9.webp",
+      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\a9.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "117756"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RzzFlDPvkB3Ja5mWYb6e/pJdOXeVWeWGdbvmT1GAyEw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 23:19:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-RzzFlDPvkB3Ja5mWYb6e/pJdOXeVWeWGdbvmT1GAyEw="
         }
       ]
     }

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Box, Button, TextField, Typography } from "@mui/material";
 import requests from "../../api/requests";
 import { toast } from "react-toastify";
+import { Description } from "@mui/icons-material";
 
 interface Props {
   product: any;
@@ -11,7 +12,7 @@ interface Props {
 
 export default function ProductForm({ product, cancelEdit }: Props) {
   const [formData, setFormData] = useState(
-    product ?? { name: "", price: "", stock: "", categoryId: "",imageUrl:""}
+    product ?? { name: "", price: "", stock: "",description:" ", categoryId: "",imageUrl:""}
   );
 
   const[file,setFile]=useState<File|null>(null);
@@ -63,6 +64,14 @@ export default function ProductForm({ product, cancelEdit }: Props) {
         type="number"
         value={formData.stock}
         onChange={(e) => setFormData({ ...formData, stock: e.target.value })}
+      />
+      <TextField
+        fullWidth
+        margin="normal"
+        label="Marka"
+        type="string"
+        value={formData.description}
+        onChange={(e) => setFormData({ ...formData, description: e.target.value })}
       />
       <TextField
         fullWidth

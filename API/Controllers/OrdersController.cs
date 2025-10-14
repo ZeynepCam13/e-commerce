@@ -33,6 +33,18 @@ namespace API.Controllers
                         .ToListAsync();
         }
 
+        [Authorize(Roles = "Admin")]
+        [HttpGet("all")]
+        public async Task<ActionResult<List<OrderDTO>>>GetAllOrders()
+        {
+            return await _context.Orders
+                        .Include(o => o.OrderItems)
+                        .OrderToDTO()
+                        .ToListAsync();
+        }
+
+
+
         [HttpGet("{id}")]
         public async Task<ActionResult<OrderDTO?>> GetOrder(int id)
         {

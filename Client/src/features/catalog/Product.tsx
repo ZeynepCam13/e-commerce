@@ -7,15 +7,35 @@ import { LoadingButton } from "@mui/lab";
 import { currenyTRY } from "../../utils/formatCurrency";
 import { addItemToCart } from "../cart/cartSlice";
 import { useAppDispatch, useAppSelector } from "../../store/store";
+import IconButton from "@mui/material/IconButton";
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import { addFavorite, removeFavorite } from "../favorites/FavoritesSlice";
+import { toast } from "react-toastify";
+
 
 interface Props {
     product: IProduct
 }
 
+
+
 export default function Product({product}: Props) {
 
   const { status } = useAppSelector(state => state.cart);
   const dispatch = useAppDispatch();
+
+  const { favorites } = useAppSelector(state => state.favorites);
+  const isFavorite = favorites.some(f => f.id === product.id);
+
+  const handleFavorite = () => {
+    if (isFavorite){ dispatch(removeFavorite(product.id));
+     toast.info("Ürün favorilerden kaldırıldı ")}
+       
+    else{ dispatch(addFavorite(product.id));
+      toast.success("Ürün favorilere eklendi ");}
+    
+  };
 
     return (
      <Card >
@@ -37,6 +57,9 @@ export default function Product({product}: Props) {
           loading={ status === "pendingAddItem" + product.id } 
           onClick={() => dispatch(addItemToCart({productId: product.id}))}>Sepete Ekle</LoadingButton>
         <Button component={Link} to={`/catalog/${product.id}`} variant="outlined" size="small" startIcon={<SearchIcon />} color="primary">Görüntüle</Button>
+        <IconButton onClick={handleFavorite}>
+      {isFavorite ? <FavoriteIcon color="error" /> : <FavoriteBorderIcon />}
+    </IconButton>
       </CardActions>
      </Card>
     );

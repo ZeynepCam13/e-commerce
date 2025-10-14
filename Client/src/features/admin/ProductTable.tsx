@@ -54,6 +54,7 @@ export default function ProductTable({ onEdit }: Props) {
             <TableCell>Ad</TableCell>
             <TableCell>Fiyat</TableCell>
             <TableCell>Stok</TableCell>
+            <TableCell>Marka</TableCell>
             <TableCell>Kategori</TableCell>
             <TableCell>İşlemler</TableCell>
           </TableRow>
@@ -65,6 +66,7 @@ export default function ProductTable({ onEdit }: Props) {
               <TableCell>{product.name}</TableCell>
               <TableCell>₺{product.price}</TableCell>
               <TableCell>{product.stock}</TableCell>
+              <TableCell>{product.description}</TableCell>
               <TableCell>{product.category?.name}</TableCell>
               <TableCell>
                 <Button

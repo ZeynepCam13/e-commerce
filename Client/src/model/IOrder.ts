@@ -11,6 +11,8 @@ export interface Order {
     orderItems: OrderItem[]
     subTotal: number
     deliveryFree: number
+    userName?: string;
+    email?: string;
   }
   
   export interface OrderItem {

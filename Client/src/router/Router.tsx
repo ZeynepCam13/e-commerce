@@ -14,6 +14,9 @@ import ChechkoutPage from "../features/checkout/CheckoutPage";
 import OrderList from "../features/orders/OrderList";
 import AuthGuard from "./AuthGuard";
 import AdminDashboard from "../features/admin/AdminDashboard";
+import AdminOrdersPage from "../features/admin/AdminOrdersPage";
+import AdminGuard from "./AdminGuard";
+import FavoritesPage from "../features/favorites/FavoritesPage";
 
 
 
@@ -29,6 +32,12 @@ export const router=createBrowserRouter([
             ]
             
             },
+            {
+        element: <AdminGuard />,
+        children: [
+          { path: "admin", element: <AdminDashboard /> },
+          { path: "admin/orders", element: <AdminOrdersPage /> }, 
+        ]},   
             {path:"",element:<HomePage/>},
             {path:"about",element:<AboutPage/>},
             {path:"contact",element:<ContactPage/>},
@@ -39,7 +48,9 @@ export const router=createBrowserRouter([
             {path:"login",element:<LoginPage/>},
             {path:"register",element:<RegisterPage/>},
             {path:"checkout",element:<ChechkoutPage/>},
-            {path:"cart",element:<ShoppingCartPage/>}
+            {path:"cart",element:<ShoppingCartPage/>},
+            {path:"favorites", element:<FavoritesPage/>}
+
         ]
 
     }

@@ -35,7 +35,7 @@ export default function LoginPage()
                 <Typography component="h1" variant="h5" sx={{textAlign: "center"}}>Giriş Yap</Typography>
                 <Box component="form" onSubmit={handleSubmit(submitForm)} noValidate sx={{mt: 2}}>
                     <TextField 
-                        {...register("username", {required: "username is required"})}
+                        {...register("username", {required: "kullanıcı adı boş geçilemez"})}
                         label="Kullanıcı Adı Giriniz" 
                         fullWidth required autoFocus 
                         sx={{mb: 2}} 
@@ -59,7 +59,7 @@ export default function LoginPage()
                         disabled={!isValid}
                         type="submit" 
                         variant="contained" 
-                        fullWidth sx={{mt: 1}}>Login</LoadingButton>
+                        fullWidth sx={{mt: 1}}>Giriş Yap</LoadingButton>
                 </Box>
             </Paper>
         </Container>

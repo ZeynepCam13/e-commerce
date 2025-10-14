@@ -3,18 +3,18 @@ import { toast } from "react-toastify";
 import { router } from "../router/Router";
 import { store } from "../store/store";
 
-// 🔧 API Base URL
+
 axios.defaults.baseURL = "http://localhost:5198/api/";
 axios.defaults.withCredentials = true;
 
-// ✅ İstek öncesi: Token ekle
+
 axios.interceptors.request.use(request => {
   const token = store.getState().account.user?.token;
   if (token) request.headers.Authorization = `Bearer ${token}`;
   return request;
 });
 
-// ✅ Cevap / Hata yönetimi
+
 axios.interceptors.response.use(
   response => response,
   (error: AxiosError) => {
@@ -52,7 +52,6 @@ axios.interceptors.response.use(
   }
 );
 
-// ✅ Ortak HTTP sorgu metotları
 const queries = {
   get: (url: string) =>
     axios.get(url).then((response: AxiosResponse) => response.data),
@@ -64,7 +63,6 @@ const queries = {
     axios.delete(url).then((response: AxiosResponse) => response.data),
 };
 
-// 🚨 Hata test endpointleri
 const Errors = {
   get400Error: () => queries.get("/error/bad-request"),
   get401Error: () => queries.get("/error/unauthorized"),
@@ -73,19 +71,19 @@ const Errors = {
   getValidationError: () => queries.get("/error/validation-error"),
 };
 
-// 📦 Ürün (Catalog) işlemleri
+
 const Catalog = {
   list: () => queries.get("products"),
   details: (id: number) => queries.get(`products/${id}`),
   getByCategory: (categoryId: number) =>
     queries.get(`products/byCategory/${categoryId}`),
 
-  // 🔽 Admin işlemleri:
+  
   add: (product: any) => queries.post("products/add", product),
   update: (id: number, product: any) => queries.put(`products/${id}`, product),
   delete: (id: number) => queries.delete(`products/${id}`),
 
-  // Fotoğraf yükleme
+  
   upload: (file: File) => {
     const formData = new FormData();
     formData.append("file", file);
@@ -97,7 +95,7 @@ const Catalog = {
   },
 };
 
-// 🛍️ Sepet işlemleri
+
 const Cart = {
   get: () => queries.get("cart"),
   addItem: (productId: number, quantity = 1) =>
@@ -106,18 +104,17 @@ const Cart = {
     queries.delete(`cart?productId=${productId}&quantity=${quantity}`),
 };
 
-// 👥 Hesap işlemleri
 const Account = {
   login: (formData: any) => queries.post("account/login", formData),
   register: (formData: any) => queries.post("account/register", formData),
   getUser: () => queries.get("account/getuser"),
 };
 
-// 📦 Sipariş işlemleri
 const Order = {
   getOrders: () => queries.get("orders"),
   getOrder: (id: number) => queries.get(`orders/${id}`),
   createOrder: (formData: any) => queries.post("orders", formData),
+  listAll:()=>queries.get('orders/all'),
 };
 const Admin = {
   createProduct: (data: any) => queries.post("products/add", data),
@@ -133,14 +130,18 @@ const Admin = {
 };
 
 
-// 📂 Kategori işlemleri
 const Category = {
   list: () => queries.get("category"),
   add: (formData: any) => queries.post("category", formData),
   delete: (id: number) => queries.delete(`category/${id}`),
 };
 
-// 🌟 Dışa aktarma
+const Favorites={
+  list:()=>queries.get('favorites'),
+  add:(productId:number)=>queries.post(`favorites/${productId}`,{}),
+  remove:(productId:number) => queries.delete(`favorites/${productId}`)
+}
+
 const requests = {
   Catalog,
   Errors,
@@ -148,7 +149,8 @@ const requests = {
   Account,
   Order,
   Category,
-  Admin
+  Admin,
+  Favorites
 };
 
 export default requests;

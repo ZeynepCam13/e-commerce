@@ -24,13 +24,13 @@ import { KeyboardArrowDown, Search, ShoppingCart,Menu as MenuIcon} from "@mui/ic
 import React, { useState, useEffect } from "react";
 import requests from "../api/requests";
 import { ICategory } from "../model/ICategory";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+
 
 
 const links = [
   { title: "E-COMMERCE", to: "/" },
   { title: "Tüm Ürünler", to: "/catalog" },
-  { title: "Hakkımızda", to: "/about" },
-  { title: "İletişim", to: "/contact" },
 ];
 
 const authLinks = [
@@ -92,15 +92,15 @@ export default function Header() {
           flexWrap: "wrap",
         }}
       >
-        {/* Sol taraf: Kategoriler + Menü bağlantıları */}
+        
         <Stack direction="row" spacing={1} alignItems="center">
-          {/* Hamburger Menü */}
+          
           <IconButton color="inherit" onClick={() => setDrawerOpen(true)}>
           <MenuIcon />
           <span style={{ fontSize: "0.9rem", marginLeft: 5 }}>KATEGORİLER</span>
          </IconButton>
 
-          {/* Drawer Menü */}
+          
           <Drawer anchor="left" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
             <Box sx={{ width: 250, mt: 2 }}>
               <List>
@@ -118,7 +118,7 @@ export default function Header() {
             </Box>
           </Drawer>
 
-          {/* Sayfa bağlantıları */}
+          
           {links.map((link) => (
             <Button key={link.to} component={NavLink} to={link.to} sx={navStyles}>
               {link.title.toUpperCase()}
@@ -126,7 +126,7 @@ export default function Header() {
           ))}
         </Stack>
 
-        {/* Arama kutusu */}
+        
         <Box
           component="form"
           onSubmit={handleSearchSubmit}
@@ -151,7 +151,7 @@ export default function Header() {
             }}
             InputProps={{
               endAdornment: (
-                <InputAdornment position="end">
+                <InputAdornment position="end" >
                   <IconButton type="submit">
                     <Search />
                   </IconButton>
@@ -161,13 +161,17 @@ export default function Header() {
           />
         </Box>
 
-        {/* Sağ taraf */}
+        
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <IconButton component={Link} to="/cart" size="large" color="inherit">
             <Badge badgeContent={itemCount} color="secondary">
               <ShoppingCart />
             </Badge>
           </IconButton>
+          <Button component={NavLink} to="/favorites" color="inherit">
+  🤍Favorilerim
+</Button>
+
 
           {user ? (
             <>
@@ -180,7 +184,7 @@ export default function Header() {
       </Button>
     )}
             
-               <Button id="user-button" onClick={handleMenuClick} endIcon={<KeyboardArrowDown />} sx={navStyles}>{user.name}</Button>
+               <Button id="user-button" onClick={handleMenuClick}  startIcon={<AccountCircleIcon />} endIcon={<KeyboardArrowDown />} sx={navStyles}>{user.name}</Button>
                       
                           <Menu id="user-menu" anchorEl={anchorEl} open={open} onClose={handleClose}>
                             <MenuItem component={Link} to="/orders">Siparişlerim</MenuItem>

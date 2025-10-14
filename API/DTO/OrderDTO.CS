@@ -18,6 +18,9 @@ namespace API.DTO
         public List<OrderItemDTO> OrderItems { get; set; } = new();
         public decimal SubTotal { get; set; }
         public decimal DeliveryFree { get; set; }
+
+        public string UserName { get; set; }
+        public string Email{ get; set; }
         
     }
 

@@ -37,6 +37,14 @@
       "PackagePath": "staticwebassets\\images\\a9.webp"
     },
     {
+      "Id": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\dudak.webp",
+      "PackagePath": "staticwebassets\\images\\dudak.webp"
+    },
+    {
+      "Id": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\hastane.png",
+      "PackagePath": "staticwebassets\\images\\hastane.png"
+    },
+    {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

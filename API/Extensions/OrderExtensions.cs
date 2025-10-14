@@ -24,6 +24,8 @@ namespace API.Extensions
                 SubTotal = i.SubTotal,
                 OrderDate = i.OrderDate,
                 OrderStatus = i.OrderStatus,
+                UserName = i.CustomerId,
+                Email=null,
                 OrderItems = i.OrderItems.Select(item => new OrderItemDTO
                 {
                     Id = item.Id,

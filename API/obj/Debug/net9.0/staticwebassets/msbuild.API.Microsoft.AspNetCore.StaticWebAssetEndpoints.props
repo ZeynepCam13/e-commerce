@@ -108,5 +108,29 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-RzzFlDPvkB3Ja5mWYb6e/pJdOXeVWeWGdbvmT1GAyEw="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"117756"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022RzzFlDPvkB3Ja5mWYb6e/pJdOXeVWeWGdbvmT1GAyEw=\u0022"},{"Name":"Last-Modified","Value":"Thu, 13 Mar 2025 23:19:27 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/API/images/dudak.2ozpmdv6ho.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\dudak.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"2ozpmdv6ho"},{"Name":"integrity","Value":"sha256-LuXFlRmE5FeXrrXoYkzdQkeeLl7aUQPJiEamvdfP6Uc="},{"Name":"label","Value":"_content/API/images/dudak.webp"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"172028"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022LuXFlRmE5FeXrrXoYkzdQkeeLl7aUQPJiEamvdfP6Uc=\u0022"},{"Name":"Last-Modified","Value":"Fri, 10 Oct 2025 06:46:19 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/API/images/dudak.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\dudak.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-LuXFlRmE5FeXrrXoYkzdQkeeLl7aUQPJiEamvdfP6Uc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"172028"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022LuXFlRmE5FeXrrXoYkzdQkeeLl7aUQPJiEamvdfP6Uc=\u0022"},{"Name":"Last-Modified","Value":"Fri, 10 Oct 2025 06:46:19 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/API/images/hastane.da489fy3w3.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\hastane.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"da489fy3w3"},{"Name":"integrity","Value":"sha256-texSNvy\u002BgjQng4\u002BYc/u0GYo28TV7mo641iqCvb0fEE0="},{"Name":"label","Value":"_content/API/images/hastane.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5169"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022texSNvy\u002BgjQng4\u002BYc/u0GYo28TV7mo641iqCvb0fEE0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 09 Oct 2025 13:49:05 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/API/images/hastane.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\hastane.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-texSNvy\u002BgjQng4\u002BYc/u0GYo28TV7mo641iqCvb0fEE0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5169"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022texSNvy\u002BgjQng4\u002BYc/u0GYo28TV7mo641iqCvb0fEE0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 09 Oct 2025 13:49:05 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

@@ -20,14 +20,14 @@ export default function ProductDetailsPage() {
 
   useEffect(() => {
     if (!product && id) dispatch(fetchProductById(parseInt(id)));
-  }, [id]); // product'ı bilerek eklemedik
+  }, [id]); 
 
   if (loading === "pendingFetchProductById") return <CircularProgress />;
   if (!product) return <NotFound />;
 
   return (
     <Stack direction={{ xs: "column", md: "row" }} spacing={6}>
-      {/* Sol: Görsel */}
+      
       <Box sx={{ width: { xs: "100%", md: "45%", lg: "33%" } }}>
         <img
           src={`http://localhost:5198/${product.imageUrl}`}
@@ -35,7 +35,7 @@ export default function ProductDetailsPage() {
         />
       </Box>
 
-      {/* Sağ: Bilgiler */}
+      
       <Box sx={{ flex: 1 }}>
         <Typography variant="h3">{product.name}</Typography>
         <Divider sx={{ mb: 2 }} />
@@ -47,15 +47,15 @@ export default function ProductDetailsPage() {
           <Table>
             <TableBody>
               <TableRow>
-                <TableCell>Name</TableCell>
+                <TableCell>İsim</TableCell>
                 <TableCell>{product.name}</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>Description</TableCell>
+                <TableCell>Marka</TableCell>
                 <TableCell>{product.description}</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>Stock</TableCell>
+                <TableCell>Stok</TableCell>
                 <TableCell>{product.stock}</TableCell>
               </TableRow>
             </TableBody>

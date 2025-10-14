@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4J2A57JHZZXHXOZk3fV4Ik1r1dHBfl9K0fLGCSP6OMM=",
+  "Hash": "N+EQUbUKPu5n19qVD7fliVhLoEGDRRmnjZlbvQ8GC8U=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -204,6 +204,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\a9.webp"
+    },
+    {
+      "Identity": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\dudak.webp",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "images/dudak#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2ozpmdv6ho",
+      "Integrity": "LuXFlRmE5FeXrrXoYkzdQkeeLl7aUQPJiEamvdfP6Uc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\dudak.webp"
+    },
+    {
+      "Identity": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\hastane.png",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "images/hastane#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "da489fy3w3",
+      "Integrity": "texSNvy+gjQng4+Yc/u0GYo28TV7mo641iqCvb0fEE0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\hastane.png"
     }
   ],
   "Endpoints": [
@@ -942,6 +984,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-RzzFlDPvkB3Ja5mWYb6e/pJdOXeVWeWGdbvmT1GAyEw="
+        }
+      ]
+    },
+    {
+      "Route": "images/dudak.2ozpmdv6ho.webp",
+      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\dudak.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "172028"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LuXFlRmE5FeXrrXoYkzdQkeeLl7aUQPJiEamvdfP6Uc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 06:46:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2ozpmdv6ho"
+        },
+        {
+          "Name": "label",
+          "Value": "images/dudak.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LuXFlRmE5FeXrrXoYkzdQkeeLl7aUQPJiEamvdfP6Uc="
+        }
+      ]
+    },
+    {
+      "Route": "images/dudak.webp",
+      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\dudak.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "172028"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LuXFlRmE5FeXrrXoYkzdQkeeLl7aUQPJiEamvdfP6Uc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 06:46:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LuXFlRmE5FeXrrXoYkzdQkeeLl7aUQPJiEamvdfP6Uc="
+        }
+      ]
+    },
+    {
+      "Route": "images/hastane.da489fy3w3.png",
+      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\hastane.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5169"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"texSNvy+gjQng4+Yc/u0GYo28TV7mo641iqCvb0fEE0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 09 Oct 2025 13:49:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "da489fy3w3"
+        },
+        {
+          "Name": "label",
+          "Value": "images/hastane.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-texSNvy+gjQng4+Yc/u0GYo28TV7mo641iqCvb0fEE0="
+        }
+      ]
+    },
+    {
+      "Route": "images/hastane.png",
+      "AssetFile": "C:\\Users\\GOLD\\Desktop\\e-commerce\\API\\wwwroot\\images\\hastane.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5169"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"texSNvy+gjQng4+Yc/u0GYo28TV7mo641iqCvb0fEE0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 09 Oct 2025 13:49:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-texSNvy+gjQng4+Yc/u0GYo28TV7mo641iqCvb0fEE0="
         }
       ]
     }

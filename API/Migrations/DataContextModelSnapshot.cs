@@ -167,6 +167,26 @@ namespace API.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("API.Entity.Favorite", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("CustomerId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("Favorites");
+                });
+
             modelBuilder.Entity("API.Entity.Order", b =>
                 {
                     b.Property<int>("Id")
@@ -480,6 +500,17 @@ namespace API.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("API.Entity.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("API.Entity.Favorite", b =>
+                {
                     b.HasOne("API.Entity.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId")

@@ -275,6 +275,9 @@ namespace API.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("TEXT");
 
+                    b.Property<int?>("Discount")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("ImageUrl")
                         .HasColumnType("TEXT");
 
@@ -283,6 +286,9 @@ namespace API.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal?>("OriginalPrice")
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("Price")
@@ -296,98 +302,6 @@ namespace API.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Products");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Description = "Tommy Hilfiger",
-                            ImageUrl = "a1.webp",
-                            IsActive = true,
-                            Name = "Spor Ayakkabı",
-                            Price = 7000m,
-                            Stock = 100
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Description = "Stradivarius",
-                            ImageUrl = "a2.webp",
-                            IsActive = true,
-                            Name = "Blazer Ceket",
-                            Price = 800m,
-                            Stock = 100
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Description = "Stradivarius",
-                            ImageUrl = "a3.webp",
-                            IsActive = false,
-                            Name = "Deri Blazer Ceket",
-                            Price = 900m,
-                            Stock = 100
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Description = "Mango",
-                            ImageUrl = "a4.webp",
-                            IsActive = true,
-                            Name = "Çanta",
-                            Price = 1000m,
-                            Stock = 100
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Description = "Armine",
-                            ImageUrl = "a5.webp",
-                            IsActive = true,
-                            Name = "Çanta",
-                            Price = 800m,
-                            Stock = 100
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Description = "Rayban",
-                            ImageUrl = "a6.webp",
-                            IsActive = true,
-                            Name = "Güneş Gözlüğü",
-                            Price = 5000m,
-                            Stock = 100
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Description = "Mavi",
-                            ImageUrl = "a7.webp",
-                            IsActive = true,
-                            Name = "Pantolon",
-                            Price = 1000m,
-                            Stock = 100
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Description = "Fossil",
-                            ImageUrl = "a8.webp",
-                            IsActive = true,
-                            Name = "Kol Saati",
-                            Price = 1000m,
-                            Stock = 100
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Description = "Manuka",
-                            ImageUrl = "a9.webp",
-                            IsActive = true,
-                            Name = "Süet Ceket",
-                            Price = 1500m,
-                            Stock = 100
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

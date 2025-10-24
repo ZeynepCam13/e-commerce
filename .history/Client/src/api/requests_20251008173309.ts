@@ -1,0 +1,140 @@
+import axios, { AxiosError, AxiosResponse } from "axios";
+import { toast } from "react-toastify";
+import { router } from "../router/Router";
+import { store } from "../store/store";
+
+// 🔧 API Base URL
+axios.defaults.baseURL = "http://localhost:5198/api/";
+axios.defaults.withCredentials = true;
+
+// ✅ İstek öncesi: Token ekle
+axios.interceptors.request.use(request => {
+  const token = store.getState().account.user?.token;
+  if (token) request.headers.Authorization = `Bearer ${token}`;
+  return request;
+});
+
+// ✅ Cevap / Hata yönetimi
+axios.interceptors.response.use(
+  response => response,
+  (error: AxiosError) => {
+    const { data, status } = error.response as AxiosResponse;
+
+    switch (status) {
+      case 400:
+        if (data.errors) {
+          const modelErrors: string[] = [];
+          for (const key in data.errors) {
+            modelErrors.push(data.errors[key]);
+          }
+          throw modelErrors.flat();
+        }
+        toast.error(data.title);
+        break;
+      case 401:
+        toast.error("Yetkisiz erişim. Lütfen giriş yapın.");
+        break;
+      case 403:
+        toast.error("Bu işlem için yetkiniz yok (sadece admin girebilir).");
+        break;
+      case 404:
+        router.navigate("/not-found");
+        break;
+      case 500:
+        router.navigate("/server-error", { state: { error: data, status } });
+        break;
+      default:
+        toast.error("Beklenmeyen bir hata oluştu!");
+        break;
+    }
+
+    return Promise.reject(error.response);
+  }
+);
+
+// ✅ Ortak HTTP sorgu metotları
+const queries = {
+  get: (url: string) =>
+    axios.get(url).then((response: AxiosResponse) => response.data),
+  post: (url: string, body: {}) =>
+    axios.post(url, body).then((response: AxiosResponse) => response.data),
+  put: (url: string, body: {}) =>
+    axios.put(url, body).then((response: AxiosResponse) => response.data),
+  delete: (url: string) =>
+    axios.delete(url).then((response: AxiosResponse) => response.data),
+};
+
+// 🚨 Hata test endpointleri
+const Errors = {
+  get400Error: () => queries.get("/error/bad-request"),
+  get401Error: () => queries.get("/error/unauthorized"),
+  get404Error: () => queries.get("/error/not-found"),
+  get500Error: () => queries.get("/error/server-error"),
+  getValidationError: () => queries.get("/error/validation-error"),
+};
+
+// 📦 Ürün (Catalog) işlemleri
+const Catalog = {
+  list: () => queries.get("products"),
+  details: (id: number) => queries.get(`products/${id}`),
+  getByCategory: (categoryId: number) =>
+    queries.get(`products/byCategory/${categoryId}`),
+
+  // 🔽 Admin işlemleri:
+  add: (product: any) => queries.post("products/add", product),
+  update: (id: number, product: any) => queries.put(`products/${id}`, product),
+  delete: (id: number) => queries.delete(`products/${id}`),
+
+  // Fotoğraf yükleme
+  upload: (file: File) => {
+    const formData = new FormData();
+    formData.append("file", file);
+    return axios
+      .post("products/upload", formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      })
+      .then((res: AxiosResponse) => res.data);
+  },
+};
+
+// 🛍️ Sepet işlemleri
+const Cart = {
+  get: () => queries.get("cart"),
+  addItem: (productId: number, quantity = 1) =>
+    queries.post(`cart?productId=${productId}&quantity=${quantity}`, {}),
+  deleteItem: (productId: number, quantity = 1) =>
+    queries.delete(`cart?productId=${productId}&quantity=${quantity}`),
+};
+
+// 👥 Hesap işlemleri
+const Account = {
+  login: (formData: any) => queries.post("account/login", formData),
+  register: (formData: any) => queries.post("account/register", formData),
+  getUser: () => queries.get("account/getuser"),
+};
+
+// 📦 Sipariş işlemleri
+const Order = {
+  getOrders: () => queries.get("orders"),
+  getOrder: (id: number) => queries.get(`orders/${id}`),
+  createOrder: (formData: any) => queries.post("orders", formData),
+};
+
+// 📂 Kategori işlemleri
+const Category = {
+  list: () => queries.get("category"),
+  add: (formData: any) => queries.post("category", formData),
+  delete: (id: number) => queries.delete(`category/${id}`),
+};
+
+// 🌟 Dışa aktarma
+const requests = {
+  Catalog,
+  Errors,
+  Cart,
+  Account,
+  Order,
+  Category,
+};
+
+export default requests;

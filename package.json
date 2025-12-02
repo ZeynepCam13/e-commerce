@@ -3,5 +3,8 @@
     "jwt-decode": "^4.0.0",
     "react-input-mask": "^2.0.4",
     "react-material-ui-carousel": "^3.4.2"
+  },
+  "devDependencies": {
+    "@types/jwt-decode": "^2.2.1"
   }
 }

@@ -157,6 +157,10 @@ namespace API.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
+                    b.Property<string>("Size")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("CartItemId");
 
                     b.HasIndex("CartId");
@@ -382,6 +386,31 @@ namespace API.Migrations
                     b.ToTable("ProductImages");
                 });
 
+            modelBuilder.Entity("API.Entity.ProductSize", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Size")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Stock")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductSizes");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.Property<int>("Id")
@@ -566,6 +595,17 @@ namespace API.Migrations
                     b.Navigation("product");
                 });
 
+            modelBuilder.Entity("API.Entity.ProductSize", b =>
+                {
+                    b.HasOne("API.Entity.Product", "Product")
+                        .WithMany("ProductSizes")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("API.Entity.AppRole", null)
@@ -635,6 +675,8 @@ namespace API.Migrations
             modelBuilder.Entity("API.Entity.Product", b =>
                 {
                     b.Navigation("Images");
+
+                    b.Navigation("ProductSizes");
                 });
 #pragma warning restore 612, 618
         }

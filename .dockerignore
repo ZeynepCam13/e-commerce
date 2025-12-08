@@ -1,0 +1,13 @@
+**/bin/
+**/obj/
+**/node_modules/
+**/.next/
+**/dist/
+**/out/
+**/publish/
+
+Dockerfile
+docker-compose.yml
+.git
+.gitignore
+.vscode

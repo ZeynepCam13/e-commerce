@@ -142,13 +142,16 @@ namespace API.Migrations
 
             modelBuilder.Entity("API.Entity.CartItem", b =>
                 {
-                    b.Property<int>("CartItemId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CartItemId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("CartId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ColorId")
                         .HasColumnType("int");
 
                     b.Property<int>("ProductId")
@@ -161,9 +164,11 @@ namespace API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("CartItemId");
+                    b.HasKey("Id");
 
                     b.HasIndex("CartId");
+
+                    b.HasIndex("ColorId");
 
                     b.HasIndex("ProductId");
 
@@ -357,11 +362,45 @@ namespace API.Migrations
                     b.Property<int>("Stock")
                         .HasColumnType("int");
 
+                    b.Property<string>("marka")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("subSubCategoryId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
 
+                    b.HasIndex("subSubCategoryId");
+
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("API.Entity.ProductColor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ColorCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ColorName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductColors");
                 });
 
             modelBuilder.Entity("API.Entity.ProductImage", b =>
@@ -409,6 +448,50 @@ namespace API.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("ProductSizes");
+                });
+
+            modelBuilder.Entity("API.Entity.SubCategory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("SubCategories");
+                });
+
+            modelBuilder.Entity("API.Entity.SubSubCategory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SubCategoryId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SubCategoryId");
+
+                    b.ToTable("SubSubCategories");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -519,17 +602,25 @@ namespace API.Migrations
 
             modelBuilder.Entity("API.Entity.CartItem", b =>
                 {
-                    b.HasOne("API.Entity.Cart", null)
+                    b.HasOne("API.Entity.Cart", "Cart")
                         .WithMany("CartItems")
                         .HasForeignKey("CartId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("API.Entity.ProductColor", "Color")
+                        .WithMany()
+                        .HasForeignKey("ColorId");
 
                     b.HasOne("API.Entity.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Cart");
+
+                    b.Navigation("Color");
 
                     b.Navigation("Product");
                 });
@@ -577,11 +668,26 @@ namespace API.Migrations
 
             modelBuilder.Entity("API.Entity.Product", b =>
                 {
-                    b.HasOne("API.Entity.Category", "Category")
+                    b.HasOne("API.Entity.Category", null)
                         .WithMany("Products")
                         .HasForeignKey("CategoryId");
 
-                    b.Navigation("Category");
+                    b.HasOne("API.Entity.SubSubCategory", "subSubCategory")
+                        .WithMany()
+                        .HasForeignKey("subSubCategoryId");
+
+                    b.Navigation("subSubCategory");
+                });
+
+            modelBuilder.Entity("API.Entity.ProductColor", b =>
+                {
+                    b.HasOne("API.Entity.Product", "Product")
+                        .WithMany("ProductColors")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("API.Entity.ProductImage", b =>
@@ -604,6 +710,28 @@ namespace API.Migrations
                         .IsRequired();
 
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("API.Entity.SubCategory", b =>
+                {
+                    b.HasOne("API.Entity.Category", "Category")
+                        .WithMany("SubCategories")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("API.Entity.SubSubCategory", b =>
+                {
+                    b.HasOne("API.Entity.SubCategory", "SubCategory")
+                        .WithMany("SubSubCategories")
+                        .HasForeignKey("SubCategoryId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("SubCategory");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -665,6 +793,8 @@ namespace API.Migrations
             modelBuilder.Entity("API.Entity.Category", b =>
                 {
                     b.Navigation("Products");
+
+                    b.Navigation("SubCategories");
                 });
 
             modelBuilder.Entity("API.Entity.Order", b =>
@@ -676,7 +806,14 @@ namespace API.Migrations
                 {
                     b.Navigation("Images");
 
+                    b.Navigation("ProductColors");
+
                     b.Navigation("ProductSizes");
+                });
+
+            modelBuilder.Entity("API.Entity.SubCategory", b =>
+                {
+                    b.Navigation("SubSubCategories");
                 });
 #pragma warning restore 612, 618
         }

@@ -16,6 +16,10 @@ public class DataContext(DbContextOptions options) : IdentityDbContext<AppUser, 
     public DbSet<Comment> Comments { get; set; }
     public DbSet<ProductImage> ProductImages { get; set; }
     public DbSet<ProductSize> ProductSizes { get; set; }
+    public DbSet<SubCategory> SubCategories { get; set; }
+    public DbSet<SubSubCategory> SubSubCategories { get; set; }
+    public DbSet<ProductColor> ProductColors { get; set; }
+
 
 
 
@@ -30,7 +34,17 @@ public class DataContext(DbContextOptions options) : IdentityDbContext<AppUser, 
              .HasForeignKey(ps => ps.ProductId)
              .OnDelete(DeleteBehavior.Cascade);
 
-        
+         modelBuilder.Entity<SubCategory>()
+          .HasOne(sc => sc.Category)
+           .WithMany(c => c.SubCategories)
+           .HasForeignKey(sc => sc.CategoryId)
+           .OnDelete(DeleteBehavior.Restrict);
+
+         modelBuilder.Entity<SubSubCategory>()
+          .HasOne(ssc => ssc.SubCategory)
+          .WithMany(sc => sc.SubSubCategories)
+          .HasForeignKey(ssc => ssc.SubCategoryId)
+          .OnDelete(DeleteBehavior.Restrict);
 
         // modelBuilder.Entity<Product>().HasData(
         //     new List<Product> {

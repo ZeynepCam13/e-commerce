@@ -1,0 +1,19 @@
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+WORKDIR /src
+
+# Köke göre copy (Doğru)
+COPY ./Shared/Shared.csproj ./Shared/
+COPY ./EmailWorker/EmailWorker.csproj ./EmailWorker/
+
+RUN dotnet restore ./EmailWorker/EmailWorker.csproj
+
+COPY . .
+
+WORKDIR /src/EmailWorker
+RUN dotnet publish -c Release -o /worker/publish
+
+FROM mcr.microsoft.com/dotnet/runtime:9.0
+WORKDIR /worker
+COPY --from=build /worker/publish .
+
+ENTRYPOINT ["dotnet", "EmailWorker.dll"]

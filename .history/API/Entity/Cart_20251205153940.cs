@@ -1,0 +1,52 @@
+namespace API.Entity;
+
+public class Cart
+{
+    public int CartId { get; set; }
+    public string CustomerId { get; set; } = null!;
+    public List<CartItem> CartItems { get; set; } = new();
+
+    public void AddItem(Product product, int quantity, string size)
+    {
+        var item = CartItems
+        .Where(c => c.ProductId == product.Id&&c.Sizes==size)
+        .FirstOrDefault();
+
+        if (item == null)
+        {
+            CartItems.Add(new CartItem { Product = product, Quantity = quantity,Sizes=size});
+        }
+        else
+        {
+            item.Quantity += quantity;
+        }
+    }
+
+    public void DeleteItem(int productId, int quantity, string size)
+    {
+        var item = CartItems.Where(c => c.ProductId == productId && c.Sizes==size).FirstOrDefault();
+
+        if (item == null) return;
+
+        item.Quantity -= quantity;
+
+        if (item.Quantity == 0)
+        {
+            CartItems.Remove(item);
+        }
+    }
+}
+
+public class CartItem
+{
+    public int CartItemId { get; set; }
+
+    public int ProductId { get; set; }
+    public Product Product { get; set; } = null!;
+
+    public int CartId { get; set; }
+    public int Quantity { get; set; }
+    public string? Sizes { get; set; }
+
+
+}

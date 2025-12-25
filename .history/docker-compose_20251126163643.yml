@@ -1,0 +1,63 @@
+version: "3.9"
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mssql
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "YourStrong!Pass123"
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql_data:/var/opt/mssql
+
+  api:
+    build:
+      context: .
+      dockerfile: API/Dockerfile
+    container_name: api
+    ports:
+      - "8080:8080"
+    depends_on:
+      - rabbitmq
+      - mssql
+    environment:
+      ASPNETCORE_URLS: "http://*:8080"
+      ConnectionStrings__DefaultConnection: "Server=mssql;Database=store;User=sa;Password=YourStrong!Pass123;TrustServerCertificate=True;"
+      SendGrid__ApiKey: "SG.xxxxx"
+      SendGrid__FromEmail: "eticaret.deneme12@gmail.com"
+
+  worker:
+    build:
+      context: .
+      dockerfile: EmailWorker/Dockerfile
+    container_name: worker
+    depends_on:
+      - rabbitmq
+    environment:
+      SendGrid__ApiKey: "SG.xxxxx"
+      SendGrid__FromEmail: "eticaret.deneme12@gmail.com"
+
+  client:
+    build:
+      context: ./Client
+      dockerfile: Dockerfile
+    container_name: client
+    ports:
+      - "3000:80"
+    depends_on:
+      - api
+
+volumes:
+  mssql_data:

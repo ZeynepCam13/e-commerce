@@ -1,0 +1,16 @@
+# Development environment
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Package.json'ı yükle
+COPY package*.json ./
+RUN npm install
+
+# Proje dosyalarını ekle
+COPY . .
+
+EXPOSE 80
+
+# Vite dev server'ı host üzerinde erişilebilir yap
+CMD ["npm", "run", "dev", "--", "--host"]

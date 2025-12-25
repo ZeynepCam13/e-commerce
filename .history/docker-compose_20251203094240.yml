@@ -1,0 +1,73 @@
+version: "3.9"
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    hostname: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mssql
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Zeynep123!"
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql_data:/var/opt/mssql
+
+  api:
+    image: mcr.microsoft.com/dotnet/sdk:9.0   # 🔥 runtime değil, SDK ile çalışacak
+    container_name: api
+    working_dir: /src/API
+    volumes:
+      - ./API:/src/API                   # 🔥 Kod mount edilir
+      - ./Shared:/src/Shared             # 🔥 Shared projesi de gerekli
+    command: ["dotnet", "watch", "run"]   # 🔥 Hot Reload
+    ports:
+      - "5198:8080"
+    depends_on:
+      - rabbitmq
+      - mssql
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_URLS: "http://*:8080"
+      ConnectionStrings__DefaultConnection: "Server=mssql;Database=store;User=sa;Password=Zeynep123!;TrustServerCertificate=True;"
+
+      JWT__Key: "893f1fcf4675f8579543d32508d90bde60b9c6b21edb1f6a9de04489f24f8b4e7b1542810c2f25344ce0b8aac65167ff3c0133632675ae156d7e8133b877e409"
+
+      SendGrid__ApiKey: "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"
+      SendGrid__FromEmail: "eticaret.deneme12@gmail.com"
+
+  worker:
+    build:
+      context: .
+      dockerfile: EmailWorker/Dockerfile
+    container_name: worker
+    depends_on:
+      - rabbitmq
+    environment:
+      SendGrid__ApiKey: "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"
+      SendGrid__FromEmail: "eticaret.deneme12@gmail.com"
+
+  client:
+    image: node:18
+    container_name: client
+    working_dir: /app
+    volumes:
+      - ./Client:/app
+    command: ["npm", "run", "dev"]
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+
+volumes:
+  mssql_data:

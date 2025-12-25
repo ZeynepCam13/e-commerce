@@ -1,0 +1,77 @@
+version: "3.9"
+
+services:
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    hostname: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mssql
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Zeynep123!"
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql_data:/var/opt/mssql
+
+  api:
+    build:
+      context: .
+      dockerfile: API/Dockerfile
+    container_name: api
+  
+    ports:
+      - "5198:8080"
+    depends_on:
+      - rabbitmq
+      - mssql
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_URLS: "http://*:8080"
+      ConnectionStrings__DefaultConnection: "Server=mssql;Database=store;User=sa;Password=Zeynep123!;TrustServerCertificate=True;"
+      JWT__Key: "893f1fcf4675f8579543d32508d90bde60b9c6b21edb1f6a9de04489f24f8b4e7b1542810c2f25344ce0b8aac65167ff3c0133632675ae156d7e8133b877e409"
+      SendGrid__ApiKey: "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"
+      SendGrid__FromEmail: "eticaret.deneme12@gmail.com"
+    volumes:
+     - product_images:/app/wwwroot/images
+
+  worker:
+    build:
+      context: .
+      dockerfile: EmailWorker/Dockerfile
+    container_name: worker
+    depends_on:
+      - rabbitmq
+    environment:
+      SendGrid__ApiKey: "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"
+      SendGrid__FromEmail: "eticaret.deneme12@gmail.com"
+
+  client:
+    build: 
+      context: /Client
+      dockerfile: Dockerfile
+    container_name: client
+    ports:
+      - "3000:80"
+    depends_on:
+      - api
+    
+       
+
+volumes:
+  mssql_data:
+
+
+
+
+
